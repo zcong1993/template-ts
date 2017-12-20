@@ -9,7 +9,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo no test!",
-    "lint": "tslint .",
+    "lint": "tslint -p .",
     "build": "tsc"
   },
   "typings": "./typings/index.d.ts",
