@@ -1,0 +1,23 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "repository": {
+    "url": "<%= username %>/<%= name %>",
+    "type": "git"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo no test!",
+    "lint": "tslint .",
+    "build": "tsc"
+  },
+  "typings": "./typings/index.d.ts",
+  "author": "<%= username %> <<%= email %>>",
+  "license": "MIT",
+  "devDependencies": {
+    "tslint": "^5.8.0",
+    "tslint-config-airbnb": "^5.4.2",
+    "typescript": "^2.6.2"
+  }
+}
