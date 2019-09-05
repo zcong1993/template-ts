@@ -1,0 +1,44 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "<%= username %>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^11.9.4",
+    "typescript": "^3.3.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,json,ts}": [
+      "yarn format",
+      "git add ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && lint-staged"
+    }
+  }
+}
